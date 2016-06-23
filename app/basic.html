@@ -6,29 +6,53 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/3.2.0/sanitize.css">
     <link rel="stylesheet" href="styles/basic.css">
   </head>
   <body>
     
-    <header class="">
-      <h1 class="h1">ANALOG COMIX</h1>
-    </header>
-    <section id="introduction" class="introduction">
+    <header class="header">
+
       <div class="container">
+
+        <div class="row clearfix">
+          <div class="col col-half">
+            <h1 class="h1">
+              <a href="#introduction">SOME TITLE</a>
+            </h1>
+          </div>
+
+          <div class="col col-half clearfix">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="#something">About</a>
+              </li>
+              <li class="menu-item">
+                <a href="#galerie">Gallery</a>
+              </li>
+              <li class="menu-item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+    <section id="introduction" class="introduction header-offset">
+      <div class="container introduction-container">
         
         <div class="row clearfix">
           <div class="col col-half introText">
-            <p class="introP">Die offizielle Webseite mit Comics und Zeichnungen von J. Stevener</p>
+            <p class="introP">Description of the author. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit totam molestiae distinctio, neque laudantium est temporibus molestias ea explicabo non facere!</p>
           
             <nav id="content_links" class="content_links">
               <ul>
-                <li><a href="#story1">Nur eine Maschine</a></li>
-                <li><a href="#story2">Kaputte Puppen I</a></li>
-                <li><a href="#story3">Kaputte Puppen II</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#impressum">Impressum</a></li>
+                <li class="li-style"><a href="#galerie">Gallery</a></li>
+                <li class="li-style"><a href="#something">Something</a></li>
+                <li class="li-style"><a href="#contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -38,35 +62,36 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="container">
-        <div class="row clearfix">
-          <div class="col col-third">one</div>
-          <div class="col col-third">two</div>
-          <div class="col col-third">three</div>
-        </div>
-      </div> -->
       
     </section>
-    
-    <section id="story1">
-      Nur eine Maschine 
-    </section>
-    
-    <section id="story2">
-      Kaputte Puppen I
-    </section>
-    
-    <section id="story3">
-      Kaputte Puppen II
-    </section>
 
-    <section id="galerie" class="galerie">
-
-      <h2>Galerie</h2>
-
+    <section id="something" class="about header-offset">
+  
       <div class="container">
-        <div class="galeri_container">
+        <h2>About</h2>
+        
+        <div class="row clearfix about-padding">
+          <div class="col col-third about-col-one">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, numquam!</p>
+          </div>
+          <div class="col col-third about-col-two">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quibusdam.</p>
+          </div>
+          <div class="col col-third about-col-three">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aut.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="galerie" class="galerie header-offset">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="galerie_container">
           <div class="row clearfix">
             <div class="col col-fourth">
               <figure>
@@ -146,21 +171,40 @@
 
     </section>
 
-    <footer id="impressum" class="footer">
+    <footer id="contact" class="footer">
 
       <div class="container">
         <div class="row clearfix">
           <div class="col col-third">
-            <h2>Something here</h2>
+            <h2>Contact</h2>
+            <a href="mailto:info@digitaleverything.net">info@digitaleverything.net</a>
+            <ul>
+              <li class="link-item">
+                <a href="www.google.com">
+                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="www.google.com">
+                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="link-item">
+                <a href="www.google.com">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
           </div>
           
           <div class="col col-third col-offset-third">
             <h2>Impressum</h2>
             <address> 
-               Karlstraße 120<br/> 
-               D-40210 Düsseldorf<br/> 
+               Eberswalder Str. 22<br/> 
+               10437 Berlin-Pankow<br/> 
                Germany
             </address>
+            <p>More info here</p>
           </div> 
         </div>
       </div>
