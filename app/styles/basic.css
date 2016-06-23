@@ -1,66 +1,149 @@
+/**
+ * Base - styling element selectors
+ */
+
 html, body {
-/*	margin: 0;
-	padding: 0;*/
 	color: white;
 	background-color: #C5C5C5;
 }
 
 header {
-	/*position: fixed;*/
-	/*margin: 0;*/
 	background-color: rgba(140, 140, 226, 0.62);
-	height: 100px;
-	width: 100%;
 	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
-#introduction {
-	height: 400px;
-	width: 100%;
-	background-color: rgba(255, 255, 0, 0.6);
+img {
+	width: 100%; /* make image responsive */
+	height: auto;
+	display: block; /* remove bottom padding */
 }
 
-#introduction div {
-	background-color: rgba(151, 177, 120, 0.71);
+a:link, a:visited {
+	color: white;
+}
+
+li {
+
+}
+
+/**
+ * Helpers
+ */
+
+.clearfix:after {
+	visibility: hidden;
 	display: block;
-	width: 50%;
-	height: 100%;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/**
+ * Custom Classes
+ */
+
+.container {
+	background-color: rgba(233, 30, 99, 0.5);
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.row {
+	clear: both;
+}
+
+.col {
 	float: left;
 }
 
-#introduction div p {
-	margin: 50px;
+.col-half {
+	width: 50%;
 }
 
-#content_links {
+.col-third {
+	width: 33.3333333333%;
+}
+
+.col-fourth {
+	width: 25%;
+	background-color: rgba(76, 175, 80, 0.48);
+}
+
+/**
+ * Header
+ */
+
+.h1 {
+	font-size: 2em;
+}
+
+/**
+ * Introduction
+ */
+
+.section {
+
+}
+
+.introDiv {
+	background-color: rgba(151, 177, 120, 0.71);
+}
+
+.introP {
+
+}
+
+.content_links {
 	background-color: rgba(255, 6, 0, 0.5);
 	display: block;
 	float: left;
 	margin-top: 50px;
-	width: 100%;
 	margin-bottom: 0;
-	margin-left: 20px;
+	padding-left: 10%;
 }
 
-#main_image {
-	display: block;
-	width: 50%;
-	float: right;
-	/*height: 100%;*/
+li:before {
+	content: "- ";
 }
 
-#galerie {
+
+/**
+ * Gallery
+ */
+
+.galerie {
 	text-align: center;
 	background-color: rgba(255, 105, 180, 0.7);
-	/*height: 500px;*/
 }
 
-#galerie figure {
+.galerie_containder {
+
+}
+
+.figure {
 	display: inline-block;
 	max-width: 20%;
 	background-color: rgba(255, 240, 192, 0.7);
 }
 
-#galerie figure img {
-	max-width: 100%;
+/**
+ * for debugging
+ */
+
+#introduction {	
+	background-color: rgba(255, 255, 0, 0.6);
+}
+
+figure {
+	background-color: rgba(0, 188, 212, 0.3);
+}
+
+figcaption {
+	background-color: rgba(252, 224, 179, 0.6);
 }

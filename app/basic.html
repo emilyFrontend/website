@@ -11,27 +11,42 @@
     <link rel="stylesheet" href="styles/basic.css">
   </head>
   <body>
-
-    <header>
-      <h1>ANALOG COMIX</h1>
+    
+    <header class="full_width">
+      <h1 class="h1">ANALOG COMIX</h1>
     </header>
-    <section id="introduction">
-      <div>
-        <p>Die offizielle Webseite mit Comics und Zeichnungen von J. Stevener</p>
-      
-        <nav id="content_links">
-          <ul>
-            <li><a href="#story1">Nur eine Maschine</a></li>
-            <li><a href="#story2">Kaputte Puppen I</a></li>
-            <li><a href="#story3">Kaputte Puppen II</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#impressum">Impressum</a></li>
-          </ul>
-        </nav>
+    <section id="introduction" class="section full_width">
+      <div class="container">
+        
+        <div class="row clearfix">
+          <div class="col col-half introText">
+            <p class="introP">Die offizielle Webseite mit Comics und Zeichnungen von J. Stevener</p>
+          
+            <nav id="content_links" class="content_links full_width">
+              <ul>
+                <li><a href="#story1">Nur eine Maschine</a></li>
+                <li><a href="#story2">Kaputte Puppen I</a></li>
+                <li><a href="#story3">Kaputte Puppen II</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#impressum">Impressum</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+          <div class="col col-half">
+            <img id="main_image" class="main_image" src="https://coldstonecreamery.com/assets/img/products/signaturecakes/signature-cakes-strawberrypassion.jpg" alt="">
+          </div>
+        </div>
       </div>
 
-      <img id="main_image" src="https://coldstonecreamery.com/assets/img/products/signaturecakes/signature-cakes-strawberrypassion.jpg" alt="">
-    
+      <!-- <div class="container">
+        <div class="row clearfix">
+          <div class="col col-third">one</div>
+          <div class="col col-third">two</div>
+          <div class="col col-third">three</div>
+        </div>
+      </div> -->
+      
     </section>
     
     <section id="story1">
@@ -46,9 +61,90 @@
       Kaputte Puppen II
     </section>
 
-    <section id="galerie">
+    <section id="galerie" class="galerie">
+
       <h2>Galerie</h2>
-      <figure>
+
+      <div class="container">
+        <div class="galeri_container">
+          <div class="row clearfix">
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 1" />
+                <figcaption>Text describing image 1</figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 2" />
+                <figcaption>Text describing image 2 </figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 1" />
+                <figcaption>Text describing image 1</figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 3" />
+                <figcaption>Text describing image 3</figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 3" />
+                <figcaption>Text describing image 3</figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 3" />
+                <figcaption>Text describing image 3</figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 3" />
+                <figcaption>Text describing image 3</figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 2" />
+                <figcaption>Text describing image 2 </figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 2" />
+                <figcaption>Text describing image 2 </figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 2" />
+                <figcaption>Text describing image 2 </figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 2" />
+                <figcaption>Text describing image 2 </figcaption>
+              </figure>
+            </div>
+            <div class="col col-fourth">
+              <figure>
+                <img src="images/gallery/03.png" alt="Image 2" />
+                <figcaption>Text describing image 2 </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--       <figure>
         <img src="images/gallery/01.png" alt="Image 1" />
         <figcaption>Text describing image 1</figcaption>
       </figure>
@@ -64,6 +160,22 @@
         <img src="images/gallery/04.png" alt="Image 4" />
         <figcaption>Text describing image 4</figcaption>
       </figure>
+      <figure>
+        <img src="images/gallery/01.png" alt="Image 1" />
+        <figcaption>Text describing image 1</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gallery/02.png" alt="Image 2" />
+        <figcaption>Text describing image 2 </figcaption>
+      </figure>
+      <figure>
+        <img src="images/gallery/03.png" alt="Image 3" />
+        <figcaption>Text describing image 3</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gallery/04.png" alt="Image 4" />
+        <figcaption>Text describing image 4</figcaption>
+      </figure> -->
     </section>
 
     <footer id="impressum">
