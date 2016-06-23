@@ -75,6 +75,10 @@ li {
 	background-color: rgba(76, 175, 80, 0.48);
 }
 
+.col-offset-third {
+	margin-left: 33.3333333333%
+}
+
 /**
  * Header
  */
@@ -86,6 +90,10 @@ li {
 /**
  * Introduction
  */
+
+.introduction {
+	height: 100vh;
+}
 
 .section {
 
@@ -133,6 +141,14 @@ li:before {
 }
 
 /**
+ * Footer
+ */
+
+.footer {
+	padding-top: 50px;
+}
+
+/**
  * for debugging
  */
 
@@ -146,4 +162,8 @@ figure {
 
 figcaption {
 	background-color: rgba(252, 224, 179, 0.6);
+}
+
+footer {
+	background-color: rgba(158, 158, 158, 0.5);
 }
