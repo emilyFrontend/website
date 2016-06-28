@@ -24,15 +24,11 @@ ul {
 li {
 }
 
-.h2 {
-	font-size: 1.5em;
-}
-
 /**
  * Helpers
  */
 
-.clearfix:after {
+.clearfix:after {   		/* note: */
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -77,6 +73,19 @@ li {
 
 .col-offset-third {
 	margin-left: 33.3333333333%
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.h2 {
+	font-size: 1.5em;
+}
+
+.current_item {
+	font-weight: 800;
+	text-shadow: 0px 0px 10px white, 0px 0px 20px white;
 }
 
 /**
@@ -128,7 +137,6 @@ li {
  */
 
 .introduction {
-	height: 100vh;
 }
 
 .introduction-container {
@@ -249,4 +257,19 @@ figcaption {
 
 footer {
 	background-color: rgba(158, 158, 158, 0.5);
+}
+
+.is-active {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: calc(50% - 100px);
+	height: 200px;
+	right: 0;
+	z-index: 10000;
+	border: 5px dotted red;
 }
