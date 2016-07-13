@@ -17,30 +17,75 @@
       <div class="container">
 
         <div class="row clearfix">
-          <div class="col col-half">
+          <div class="col col-logo">
             <h1 class="h1">
               <a href="#">SOME TITLE</a>
             </h1>
           </div>
+          
+          <div class="col col-menu-icon">
 
-          <div class="col col-half clearfix">
-            <ul class="menu">
-              <li class="menu-item">
-                <a href="#introduction">Home</a>
-              </li>
-              <li class="menu-item">
-                <a href="#about">About</a>
-              </li>
-              <li class="menu-item">
-                <a href="#gallery">Gallery</a>
-              </li>
-              <li class="menu-item">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
+            <div class="menu-icon js-toggle">
+
+              <input type="checkbox" id="icon" name="icon" />
+              
+              <label for="icon">
+                
+                <div class="open">
+                  <svg width="25" height="25">
+                    <line x1="0" y1="3" 
+                          x2="25" y2="3" 
+                          stroke="white" 
+                          stroke-width="3"/>
+                    <line x1="0" y1="13" 
+                          x2="25" y2="13" 
+                          stroke="white" 
+                          stroke-width="3"/>
+                    <line x1="0" y1="22" 
+                          x2="25" y2="22" 
+                          stroke="white" 
+                          stroke-width="3"/>
+                  </svg>
+                </div>
+              
+                <div class="close">   
+                  <svg width="25" height="25">
+                    <line x1="0" y1="25" 
+                          x2="25" y2="0" 
+                          stroke="white" 
+                          stroke-width="3"/>
+                    <line x1="0" y1="0" 
+                          x2="25" y2="25" 
+                          stroke="white" 
+                          stroke-width="3"/>
+                  </svg>
+                </div>
+
+                <ul class="menu">
+                  <li class="menu-item">
+                    <a href="#introduction">Home</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#about">About</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#gallery">Gallery</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+
+
+              </label>
+            
+            </div>
+            
           </div>
 
         </div>
+
+
       </div>
 
     </header>
@@ -213,6 +258,10 @@
       </div>
 
     </footer>
+
+    <div class="modal_window">
+      <img src="" alt="">
+    </div>
     
   </body>
 <!-- Scripts -->

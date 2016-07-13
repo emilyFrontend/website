@@ -4,7 +4,7 @@
 
 html, body {
 	color: white;
-	background-color: #C5C5C5;
+	background-color: white;
 }
 
 img {
@@ -42,7 +42,7 @@ li {
  */
 
 .container {
-	background-color: rgba(233, 30, 99, 0.5);
+	/*background-color: rgba(233, 30, 99, 0.5);*/
 	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
@@ -60,6 +60,14 @@ li {
 
 .col-half {
 	width: 50%;
+}
+
+.col-logo {
+	width: 75%;
+}
+
+.col-menu-icon {
+	width: 25%;
 }
 
 .col-third {
@@ -97,12 +105,12 @@ li {
  */
 
 .header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
-	background-color: rgba(140, 140, 226, 0.62);
+	background-color: rgb(125, 134, 120);
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -112,16 +120,16 @@ li {
 }
 
 .h1 {
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .menu {
-	float: right;
-	background-color: rgba(128, 84, 234, 0.52);
+	/*float: right;*/
+	/*background-color: rgb(127, 132, 121)*/
 }
 
 .menu-item {
-	display: inline-block;
+	/*display: inline-block;*/
 	font-weight: 500;
 	font-size: 1em;
   /*margin-right: 1em;*/
@@ -133,7 +141,7 @@ li {
 /*}*/
 
 .menu-item + .menu-item {
-	margin-left: 1em;
+	/*margin-left: 1em;*/
 }
 
 /**
@@ -211,10 +219,6 @@ li {
 	background-color: rgba(255, 105, 180, 0.7);
 }
 
-/*.gallery-h2 {
-	float: left;
-}*/
-
 .galerie_container {
 	padding-bottom: 5%;
 }
@@ -240,6 +244,70 @@ li {
 	display: inline-block;
 	margin-right: 1em;
 }
+
+/** 
+ * media query 
+ */
+
+/*@media screen and (max-width: 600px) {
+    .header {
+    	height: 78px;
+    	background-color: #060606;
+    }
+}*/
+
+/**
+* menu-icon
+*/
+
+.menu-icon {
+	float: right;
+	position: relative;
+}
+
+.close, .menu {
+	display: none;
+}
+
+input[type=checkbox] {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+
+}
+
+label {
+	background-color: red;
+	cursor: pointer;
+}
+
+.open, .close {
+	padding: 10px;
+}
+
+.open {
+	background-color: red;
+}
+
+.close {
+	background-color: green;
+}
+
+input[type=checkbox]:checked + label .open {
+	display: none;
+}
+
+
+input[type=checkbox]:checked + label .close {
+	display: block;
+}
+
+input[type=checkbox]:checked + label .menu {
+	display: block;
+}
+
 
 /**
  * for debugging

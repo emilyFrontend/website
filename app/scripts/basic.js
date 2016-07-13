@@ -50,11 +50,11 @@ updatePositions();
 detectPage();
 
 window.addEventListener("resize", function() {
-	console.log("resized!!");
+	// console.log("resized!!");
 
 	updatePositions();
 
-	console.log(blockOffsetList);
+	// console.log(blockOffsetList);
 });
 
 window.addEventListener("scroll", detectPage);
