@@ -1,7 +1,6 @@
 
-// 1. replace vh values with margin 200px v
-// 2. have correct state when website is opened (put them in a function) -> updatePositions()
-// 3. research browser mechanics layout/composite/paints/reflows/... 
+// 1. have click handler on 1 element v
+// 2. div reconstruct
 
 // cache DOM elements
 var blockNodeList = document.querySelectorAll(".js-block");
@@ -45,17 +44,32 @@ function detectPage() {
 	}
 }
 
-updatePositions();
+// ------------------------------
+// TOGGLE BEHAVIOUR
+// Click hamburger to show menu
+// ------------------------------
 
-detectPage();
+var toggle = document.querySelector(".js-toggle"); 
+
+toggle.addEventListener("click", function(e) {
+
+	e.currentTarget.classList.toggle('is-toggled');
+
+});	
+
+// ------------------------------
+// RESIZE BEHAVIOUR
+// ------------------------------
 
 window.addEventListener("resize", function() {
-	// console.log("resized!!");
 
 	updatePositions();
 
-	// console.log(blockOffsetList);
 });
 
 window.addEventListener("scroll", detectPage);
 
+
+updatePositions();
+
+detectPage();

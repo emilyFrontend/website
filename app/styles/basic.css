@@ -123,10 +123,13 @@ li {
 	font-size: 1.5em;
 }
 
+
 .menu {
-	/*float: right;*/
-	/*background-color: rgb(127, 132, 121)*/
 }
+
+/*.menu .istoggled {
+	display: block;
+}*/
 
 .menu-item {
 	/*display: inline-block;*/
@@ -142,6 +145,37 @@ li {
 
 .menu-item + .menu-item {
 	/*margin-left: 1em;*/
+}
+
+/**
+* toggle
+*/
+
+.toggle {
+	float: right;
+	position: relative;
+}
+
+.open-icon, .close-icon {
+	padding: 10px;
+}
+
+.open-icon {
+	background-color: red;
+	display: block;
+}
+
+.close-icon {
+	background-color: green;
+	display: none;
+}
+
+.toggle.is-toggled .open-icon {
+	display: none;
+}
+
+.toggle.is-toggled .close-icon {
+	display: block;
 }
 
 /**
@@ -256,57 +290,35 @@ li {
     }
 }*/
 
-/**
-* menu-icon
-*/
 
-.menu-icon {
-	float: right;
-	position: relative;
-}
-
-.close, .menu {
+/*.close, .menu {
 	display: none;
-}
+}*/
 
-input[type=checkbox] {
+/*input[type=checkbox] {
 	opacity: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 	cursor: pointer;
-
 }
 
 label {
 	background-color: red;
 	cursor: pointer;
-}
+}*/
 
-.open, .close {
-	padding: 10px;
-}
-
-.open {
-	background-color: red;
-}
-
-.close {
-	background-color: green;
-}
-
-input[type=checkbox]:checked + label .open {
+/*input[type=checkbox]:checked + label .open {
 	display: none;
-}
+}*/
 
-
-input[type=checkbox]:checked + label .close {
+/*input[type=checkbox]:checked + label .close {
 	display: block;
-}
+}*/
 
-input[type=checkbox]:checked + label .menu {
+/*input[type=checkbox]:checked + label .menu {
 	display: block;
-}
+}*/
 
 
 /**
