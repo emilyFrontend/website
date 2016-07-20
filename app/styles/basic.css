@@ -109,7 +109,7 @@ li {
 	left: 0;
 	right: 0;
 	z-index: 100;
-	background-color: rgb(125, 134, 120);
+	/*background-color: rgb(125, 134, 120);*/
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -133,10 +133,14 @@ li {
 .logo-and-icon {
 	height: 58px;
 	margin-top: 20px;
+	background-color: rgb(125, 134, 120);
 }
 
 .menu-lists {
-	display: none;
+	/*display: none;*/
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility .5s, opacity .5s;
 }
 
 .menu-item {
@@ -185,7 +189,9 @@ li {
 }
 
 .is-visible {
-	display: block;
+	/*display: block;*/
+	visibility: visible;
+	opacity: 1;
 }
 
 /**
