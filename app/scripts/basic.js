@@ -49,11 +49,15 @@ function detectPage() {
 // Click hamburger to show menu
 // ------------------------------
 
-var toggle = document.querySelector(".js-toggle"); 
+var toggle = document.querySelector(".js-toggle");
+
+var menuList = document.querySelector(".js-menu-lists");
 
 toggle.addEventListener("click", function(e) {
 
 	e.currentTarget.classList.toggle('is-toggled');
+
+	menuList.classList.toggle('is-visible');
 
 });	
 

@@ -135,16 +135,14 @@ li {
 	margin-top: 20px;
 }
 
-/*.menu .istoggled {
-	display: block;
-}*/
+.menu-lists {
+	display: none;
+}
 
 .menu-item {
-	/*display: inline-block;*/
 	font-weight: 500;
 	font-size: 1em;
-  /*margin-right: 1em;*/
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /*.menu-item:last-child {*/
@@ -183,6 +181,10 @@ li {
 }
 
 .toggle.is-toggled .close-icon {
+	display: block;
+}
+
+.is-visible {
 	display: block;
 }
 
@@ -294,7 +296,7 @@ li {
 @media (min-width: 700px) and (orientation: landscape) {
 
 	.logo-and-icon {
-		width: 25%;
+		height: auto;
 	}
 
 	.menu-icon {
@@ -308,6 +310,7 @@ li {
 
 	.menu-item {
 		display: inline-block;
+		margin-right: 1em;
 	}
 }
 
@@ -392,4 +395,12 @@ body:after {
 	z-index: 10000;
 	border: 5px dotted red;
 	/*display: none;*/
+}
+
+.menu-lists {
+	background-color: rgba(223, 123, 123, 0.5);
+}
+
+.logo {
+	background-color: rgba(123, 223, 123, 0.5);
 }
