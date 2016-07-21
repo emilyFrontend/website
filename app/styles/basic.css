@@ -110,8 +110,8 @@ li {
 	right: 0;
 	z-index: 100;
 	/*background-color: rgb(125, 134, 120);*/
-	padding-top: 15px;
-	padding-bottom: 15px;
+	/*padding-top: 15px;*/
+	/*padding-bottom: 15px;*/
 }
 
 .header-offset {
@@ -120,6 +120,7 @@ li {
 
 .logo {
 	float: left;
+	padding-top: 10px;
 }
 
 .h1 {
@@ -131,16 +132,25 @@ li {
 }
 
 .logo-and-icon {
-	height: 58px;
-	margin-top: 20px;
+	position: relative;
+	height: 65px;
+	padding-top: 10px;
 	background-color: rgb(125, 134, 120);
+	z-index: 100;
 }
 
 .menu-lists {
 	/*display: none;*/
-	opacity: 0;
-	visibility: hidden;
-	transition: visibility .5s, opacity .5s;
+	/*opacity: 0;*/
+	/*visibility: hidden;*/
+	transform: translateY(-145px);
+	/*transform: scale(1,0);*/
+	/*transform-origin: 0% 0%;*/
+	transition: transform .8s;
+	/*transition: visibility .5s, opacity .5s;*/
+	background-color: rgb(125, 134, 120);
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .menu-item {
@@ -190,8 +200,11 @@ li {
 
 .is-visible {
 	/*display: block;*/
-	visibility: visible;
-	opacity: 1;
+	/*visibility: visible;*/
+	/*opacity: 1;*/
+	transform: translateY(0);
+	/*transform: scale(1,1);*/
+	/*transition: transform .8s;*/
 }
 
 /**
@@ -312,6 +325,8 @@ li {
 	.menu-lists {
 		display: inline-block;
 		float: right;
+		transform: scale(1,1);
+		transition: none;
 	}
 
 	.menu-item {
@@ -401,10 +416,6 @@ body:after {
 	z-index: 10000;
 	border: 5px dotted red;
 	/*display: none;*/
-}
-
-.menu-lists {
-	background-color: rgba(223, 123, 123, 0.5);
 }
 
 .logo {
