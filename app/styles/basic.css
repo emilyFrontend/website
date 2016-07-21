@@ -28,7 +28,7 @@ li {
  * Helpers
  */
 
-.clearfix:after {   		/* note: */
+.clearfix:after {   		/* Note: search for how it works. */
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -110,9 +110,6 @@ li {
 	right: 0;
 	z-index: 100;
 	background-color: rgb(125, 134, 120);
-	/*background-color: rgb(125, 134, 120);*/
-	/*padding-top: 15px;*/
-	/*padding-bottom: 15px;*/
 }
 
 
@@ -148,13 +145,6 @@ li {
 	background-color: rgb(125, 134, 120);
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
-	/*padding-left: 2%;*/
-  /*padding-right: 2%;*/
-  /*position: absolute;*/
-  /*top: 65px;*/
-  /*left: 0;*/
-  /*right: 0;*/
 }
 
 .menu-item {
@@ -195,12 +185,7 @@ li {
 }
 
 .is-visible {
-	/*display: block;*/
-	/*visibility: visible;*/
-	/*opacity: 1;*/
 	transform: translateY(0);
-	/*transform: scale(1,1);*/
-	/*transition: transform .8s;*/
 }
 
 /**
@@ -261,13 +246,6 @@ li {
 .about-col-three {
 	padding-left: 20px;
 }
-/*.about-col-padding + .about-col-padding {
-	padding-left: 50px;
-}*/
-
-/*.about-col-padding:last-child {*/
-	/*padding-right: 2.5%;*/
-/*}*/
 
 /**
  * Gallery
@@ -349,38 +327,6 @@ li {
 	}
 
 }
-
-
-
-/*.close, .menu {
-	display: none;
-}*/
-
-/*input[type=checkbox] {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-}
-
-label {
-	background-color: red;
-	cursor: pointer;
-}*/
-
-/*input[type=checkbox]:checked + label .open {
-	display: none;
-}*/
-
-/*input[type=checkbox]:checked + label .close {
-	display: block;
-}*/
-
-/*input[type=checkbox]:checked + label .menu {
-	display: block;
-}*/
-
 
 /**
  * for debugging
