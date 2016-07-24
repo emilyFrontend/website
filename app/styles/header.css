@@ -1,0 +1,84 @@
+/**
+ * Header
+ */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: rgb(125, 134, 120);
+}
+
+.header-offset {
+	padding-top: 78px;
+}
+
+.logo {
+	float: left;
+	padding-top: 10px;
+}
+
+.h1 {
+	font-size: 1.5em;
+}
+
+.menu-icon {
+	float: right;
+}
+
+.logo-and-icon {
+	position: relative;
+	height: 65px;
+	padding-top: 10px;
+	background-color: rgb(125, 134, 120);
+	z-index: 100;
+}
+
+.menu-lists {
+	transform: translateY(-145px);
+	transition: transform .5s;
+	background-color: rgb(125, 134, 120);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.menu-item {
+	font-weight: 500;
+	font-size: 1em;
+  margin-top: 10px;
+}
+
+/**
+* Header menu toggle
+*/
+
+.toggle {
+	float: right;
+	position: relative;
+}
+
+.open-icon, .close-icon {
+	padding: 10px;
+}
+
+.open-icon {
+	display: block;
+}
+
+.close-icon {
+	display: none;
+}
+
+.toggle.is-toggled .open-icon {
+	display: none;
+}
+
+.toggle.is-toggled .close-icon {
+	display: block;
+}
+
+.is-visible {
+	transform: translateY(0);
+}

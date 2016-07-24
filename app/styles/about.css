@@ -1,0 +1,20 @@
+/**
+ * About
+ */
+
+.about-padding {
+	padding-top: 10%;
+}
+
+.about-col-one {
+	padding-right: 20px;
+}
+
+.about-col-two {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.about-col-three {
+	padding-left: 20px;
+}

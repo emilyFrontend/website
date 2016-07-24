@@ -73,7 +73,6 @@ window.addEventListener("resize", function() {
 
 window.addEventListener("scroll", detectPage);
 
-
 updatePositions();
 
 detectPage();

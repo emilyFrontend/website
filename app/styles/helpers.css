@@ -1,0 +1,12 @@
+/**
+ * Helpers
+ */
+
+.clearfix:after {   		/* Note: search for how it works. */
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}

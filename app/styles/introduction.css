@@ -1,0 +1,20 @@
+/**
+ * Introduction
+ */
+
+.introduction-container {
+	margin-top: 50px;
+}
+
+.introDiv {
+	background-color: rgba(151, 177, 120, 0.71);
+}
+
+.content_links {
+	background-color: rgba(255, 6, 0, 0.5);
+	display: block;
+	float: left;
+	margin-top: 50px;
+	margin-bottom: 0;
+	padding-left: 10%;
+}
