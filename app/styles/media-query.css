@@ -42,4 +42,8 @@
 		margin-right: auto;
 	}
 
+	.gallery-col {
+		width: 50%;
+	}
+
 }
