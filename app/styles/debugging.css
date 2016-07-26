@@ -10,10 +10,6 @@
 	background-color: rgba(147, 74, 195, 0.33);
 }
 
-#gallery {
-	background-color: rgba(255, 235, 59, 0.3);
-}
-
 figure {
 	background-color: rgba(0, 188, 212, 0.3);
 }
@@ -31,7 +27,7 @@ body:after {
 	right: 0;
 	z-index: 10000;
 	border: 5px dotted red;
-	/*display: none;*/
+	display: none;
 }
 
 .logo {
