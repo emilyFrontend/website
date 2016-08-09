@@ -3,7 +3,7 @@
 // 2. div reconstruct
 
 // cache DOM elements
-var blockNodeList = document.querySelectorAll(".js-block");
+var blockNodeList = document.querySelectorAll('.js-block');
 // cache positions
 var blockOffsetList = [];
 // Section heights
@@ -49,11 +49,11 @@ function detectPage() {
 // Click hamburger to show menu
 // ------------------------------
 
-var toggle = document.querySelector(".js-toggle");
+var toggle = document.querySelector('.js-toggle');
 
-var menuList = document.querySelector(".js-menu-lists");
+var menuList = document.querySelector('.js-menu-lists');
 
-toggle.addEventListener("click", function(e) {
+toggle.addEventListener('click', function(e) {
 
 	e.currentTarget.classList.toggle('is-toggled');
 
@@ -65,13 +65,13 @@ toggle.addEventListener("click", function(e) {
 // RESIZE BEHAVIOUR
 // ------------------------------
 
-window.addEventListener("resize", function() {
+window.addEventListener('resize', function() {
 
 	updatePositions();
 
 });
 
-window.addEventListener("scroll", detectPage);
+window.addEventListener('scroll', detectPage);
 
 updatePositions();
 
