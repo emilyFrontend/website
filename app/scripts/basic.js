@@ -1,7 +1,4 @@
 
-// 1. have click handler on 1 element v
-// 2. div reconstruct
-
 // cache DOM elements
 var blockNodeList = document.querySelectorAll('.js-block');
 // cache positions
@@ -37,9 +34,9 @@ function detectPage() {
 
 		if (bottomBelowTop && topAboveBottom) {
 			blockNodeList[i].classList.add('is-active');
-		} else {
+		} /*else {
 			blockNodeList[i].classList.remove('is-active');
-		}
+		}*/
 
 	}
 }
