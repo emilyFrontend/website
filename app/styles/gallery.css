@@ -15,7 +15,7 @@ figure {
 }
 
 .gallery_container {
-	padding-bottom: 5%;
+	/*padding-bottom: 5%;*/
 }
 
 /*.figure {
@@ -27,4 +27,10 @@ figure {
 .gallery_container img {
 	height: 180px;
 	object-fit: cover;
+}
+
+@media (max-width: 699px) {
+	.gallery-col {
+		width: 50%;
+	}
 }

@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="styles/modal.css">
 
-    <link rel="stylesheet" href="styles/media-query.css">
+    <!-- <link rel="stylesheet" href="styles/media-query.css"> -->
 
     <link rel="stylesheet" href="styles/debugging.css">
 
@@ -95,15 +95,15 @@
         </div>
 
     </header>
-    <section id="introduction" class="block introduction header-offset js-block bottom-margin">
+    <section id="introduction" class="block introduction header-offset js-block">
       <div class="container introduction-container">
         
-        <div class="row clearfix">
-          <div class="col col-half introText">
+        <div class="introContent padding-top"><!-- (row clearfix) -->
+          <div class="introText">
             <p class="introP">Description of the author. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit totam molestiae distinctio, neque laudantium est temporibus molestias ea explicabo non facere!</p>
           </div>
           
-          <div class="col col-half">
+          <div class="introImage">
             <img id="main_image" class="main_image" src="images/gallery/cake.jpg" alt="">
           </div>
         </div>
@@ -111,21 +111,22 @@
       
     </section>
 
-    <section id="about" class="block about header-offset js-block bottom-margin">
+    <section id="about" class="block about header-offset js-block">
   
       <div class="container">
         <h2 class="h2">About</h2>
         
-        <div class="row clearfix about-padding">
-          <div class="col col-third about-col-one">
+        <div class="row clearfix padding-top">
+          <div class="aboutColumn about-col-one">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, numquam!</p>
           </div>
-          <div class="col col-third about-col-two">
+          <div class="aboutColumn about-col-two">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quibusdam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim magnam earum odit quis aperiam velit distinctio veniam corrupti, ad cupiditate!</p>
           </div>
-          <div class="col col-third about-col-three">
+          <div class="aboutColumn about-col-three">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aut.</p>
           </div>
@@ -134,11 +135,11 @@
       </div>
     </section>
 
-    <section id="gallery" class="block gallery header-offset js-block bottom-margin">
+    <section id="gallery" class="block gallery header-offset js-block">
       <div class="container">
         <h2 class="h2">Gallery</h2>
-        <div class="gallery_container">
-          <div class="row clearfix js-gallery">
+        <div class="row clearfix padding-top">
+          <div class="gallery_container js-gallery">
             <div class="col gallery-col">
               <figure data-image-number="1">
                 <img src="images/gallery/modal/1.jpg" alt="Image 1" />

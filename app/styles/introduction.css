@@ -10,11 +10,40 @@
 	background-color: rgba(151, 177, 120, 0.71);
 }
 
-.content_links {
+.introText {
+	padding-right: 2%;
+}
+
+/*.content_links {
 	background-color: rgba(255, 6, 0, 0.5);
 	display: block;
 	float: left;
 	margin-top: 50px;
 	margin-bottom: 0;
 	padding-left: 10%;
+}*/
+
+@media (min-width: 700px) {
+	.introContent {
+		clear: both;
+	}
+
+	.introContent:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	.introText {
+		float: left;
+		width: 50%;
+	}
+
+	.introImage {
+		float: left;
+		width: 50%;
+	}
 }

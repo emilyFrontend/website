@@ -72,13 +72,3 @@ for (var i = 0; i < closes.length; i++) {
     hideModal();
   });
 }
-
-/*
-closeButton.addEventListener("click", function() {
-	hideModal();
-});
-
-screenOverlay.addEventListener("click", function() {
-	hideModal();
-});
-*/
