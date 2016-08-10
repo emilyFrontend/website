@@ -2,7 +2,7 @@
  * media query 
  */
 
-@media (min-width: 700px) and (orientation: landscape) {
+@media (min-width: 700px) {
 
 	.logo-and-icon {
 		height: auto;
@@ -40,6 +40,10 @@
 		max-width: 90%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.gallery-col {
+		width: 50%;
 	}
 
 }
