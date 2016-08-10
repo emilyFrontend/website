@@ -1,8 +1,11 @@
 
 var imgNumber = 1;
 
+var modalOn = false;
+
 var modal = document.querySelector(".modal");
 var screenOverlay = document.querySelector(".screen-overlay");
+var introImage = document.querySelector(".introImage");
 
 var prevButton = modal.querySelector(".previous");
 var nextButton = modal.querySelector(".next");
@@ -20,6 +23,7 @@ var numOfItems = gallery.querySelectorAll("figure").length;
 var closes = document.querySelectorAll(".js-modal-close");
 
 function showModal() {
+	modalOn = true;
 	modal.classList.add("modal-show");
 	screenOverlay.classList.add("modal-show");
 }
@@ -27,11 +31,32 @@ function showModal() {
 function hideModal() {
 	modal.classList.remove("modal-show");
 	screenOverlay.classList.remove("modal-show");
+	modalOn = false;
 }
 
 function modalContent(imgNumber) {
 	imgNode.src = "images/gallery/modal/" + imgNumber + ".jpg";
 	captionNode.textContent = figCaptions[imgNumber-1].textContent;
+}
+
+function next() {
+	if (imgNumber < numOfItems) {
+		imgNumber++ ;
+	} else {
+		imgNumber = 1;
+	}
+
+	modalContent(imgNumber);
+}
+
+function previous() {
+	if (imgNumber > 1) {
+		imgNumber-- ;
+	} else {
+		imgNumber = numOfItems;
+	}
+
+	modalContent(imgNumber);
 }
 
 gallery.addEventListener("click", function(e) {
@@ -43,28 +68,13 @@ gallery.addEventListener("click", function(e) {
 
 });
 
-nextButton.addEventListener("click", function() {
+nextButton.addEventListener("click", next);
 
-	if (imgNumber < numOfItems) {
-		imgNumber++ ;
-	} else {
-		imgNumber = 1;
-	}
+prevButton.addEventListener("click", previous);
 
+introImage.addEventListener("click", function() {
+	showModal();
 	modalContent(imgNumber);
-
-});
-
-prevButton.addEventListener("click", function() {
-
-	if (imgNumber > 1) {
-		imgNumber-- ;
-	} else {
-		imgNumber = numOfItems;
-	}
-
-	modalContent(imgNumber);
-
 });
 
 for (var i = 0; i < closes.length; i++) {
@@ -72,3 +82,27 @@ for (var i = 0; i < closes.length; i++) {
     hideModal();
   });
 }
+
+window.addEventListener("keydown", function(e) {
+
+	if (modalOn) {
+		switch (e.which) {
+	    case 37:
+	      previous();
+	      break;
+	    case 39:
+	      next();
+	      break;
+      case 27:
+	      hideModal();
+	      break;
+	    default:
+	      return;
+	  }
+	} else {
+		return;
+	}
+
+});
+
+//37 left 39 right
