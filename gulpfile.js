@@ -6,11 +6,6 @@ var htmlreplace = require('gulp-html-replace');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 
-gulp.task('default', function() {
-  // place code for your default task here
-  console.log("test default task");
-});
-
 gulp.task("clean", function() {
 	return del([
     "build/"
@@ -38,19 +33,12 @@ gulp.task("css", function() {
     .pipe(gulp.dest("build/"));
 });
 
-gulp.task("minify-css", function() {
-  return gulp.src(
-  		"build/css/styles.css"
-  	)
-    .pipe(gulp.dest("build/css/"));
-});
-
 gulp.task("replace", function() {
   return gulp.src(
   	"src/index.html"
   	)
     .pipe(htmlreplace({
-      "css": "styles.css"
+      "css": "styles.min.css"
     }))
     .pipe(gulp.dest("build/"));
 });
@@ -67,6 +55,6 @@ gulp.task("copy", function() {
 });
 
 gulp.task("build", function() {
-	runSequence("clean", ["concat", "replace", "copy"]);
+	runSequence("clean", ["css", "replace", "copy"]);
 });
 
