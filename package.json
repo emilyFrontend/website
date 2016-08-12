@@ -1,0 +1,33 @@
+{
+  "name": "cakeapp",
+  "version": "1.0.0",
+  "description": "This app shows you cake",
+  "main": "basic.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilyFrontend/website.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Emily",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emilyFrontend/website/issues"
+  },
+  "homepage": "https://github.com/emilyFrontend/website#readme",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-rename": "^1.2.2",
+    "run-sequence": "^1.2.2",
+    "sanitize.css": "^4.1.0"
+  }
+}

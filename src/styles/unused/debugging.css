@@ -1,0 +1,15 @@
+/**
+ * for debugging
+ */
+
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: calc(50% - 100px);
+	height: 200px;
+	right: 0;
+	z-index: 10000;
+	border: 5px dotted red;
+	display: none;
+}
