@@ -36,7 +36,7 @@ v1.0.0
 
 ## Authors
 
-* **Emily Wu**
+* Emily Wu
 
 ## Acknowledgments
 
