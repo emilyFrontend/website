@@ -24,6 +24,8 @@ npm install
 ```
 gulp build
 ```
+Open `index.html` to start.
+
 ## Technology
 
 * HTML5
