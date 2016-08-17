@@ -13,6 +13,10 @@ img {
 	display: block; /* remove bottom padding */
 }
 
+a {
+	text-decoration: none;
+}
+
 a:link, a:visited {
 	color: white;
 }
@@ -22,4 +26,8 @@ ul {
 }
 
 li {
+}
+
+figure {
+	margin: 0;
 }

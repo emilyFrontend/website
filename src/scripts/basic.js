@@ -1,4 +1,3 @@
-
 // cache DOM elements
 var blockNodeList = document.querySelectorAll('.js-block');
 // cache positions

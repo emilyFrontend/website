@@ -1,0 +1,17 @@
+// Third-party
+@import "vendor/font-awesome/font-awesome";
+// @import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "vendor/sanitize/sanitize.scss";
+
+// base, general
+@import "_base";
+@import "_helpers";
+
+// components
+@import "_customs";
+@import "_header";
+@import "_introduction";
+@import "_about";
+@import "_gallery";
+@import "_footer";
+@import "_modal";

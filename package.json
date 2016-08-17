@@ -20,13 +20,19 @@
   },
   "homepage": "https://github.com/emilyFrontend/website#readme",
   "devDependencies": {
+    "browser-sync": "^2.14.0",
     "del": "^2.2.1",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
+    "gulp-ext-replace": "^0.3.0",
     "gulp-html-replace": "^1.6.1",
+    "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "node-sass": "^3.8.0",
     "run-sequence": "^1.2.2",
     "sanitize.css": "^4.1.0"
   }
