@@ -5,6 +5,9 @@ var runSequence = require('run-sequence');
 var htmlreplace = require('gulp-html-replace');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
+var ext_replace = require('gulp-ext-replace');
+var sass = require('gulp-sass');
+var livereload = require('gulp-livereload');
 
 gulp.task("clean", function() {
 	return del([
@@ -12,7 +15,7 @@ gulp.task("clean", function() {
   ]);
 });
 
-gulp.task("css", function() {
+/*gulp.task("css", function() {
   return gulp.src([
 	  	"node_modules/font-awesome/css/font-awesome.css",
   		"node_modules/sanitize.css/sanitize.css",
@@ -31,14 +34,14 @@ gulp.task("css", function() {
     .pipe(cleanCSS({keepSpecialComments: 0}))
     .pipe(rename("css/styles.min.css"))
     .pipe(gulp.dest("build/"));
-});
+});*/
 
-gulp.task("replace", function() {
+gulp.task("html", function() {
   return gulp.src(
   	"src/index.html"
   	)
     .pipe(htmlreplace({
-      "css": "styles.min.css"
+      "css": "styles/style.min.css"
     }))
     .pipe(gulp.dest("build/"));
 });
@@ -46,7 +49,8 @@ gulp.task("replace", function() {
 gulp.task("copy", function() {
 	return gulp.src([
 			"src/images/**/*",
-			"src/scripts/**/*"
+			"src/scripts/**/*",
+			"src/fonts/*"
 		], 
 		{
 			base: "src"
@@ -54,7 +58,30 @@ gulp.task("copy", function() {
 		.pipe(gulp.dest("build/"));
 });
 
-gulp.task("build", function() {
-	runSequence("clean", ["css", "replace", "copy"]);
+gulp.task("sass", function() {
+  return gulp.src("src/styles/style.scss")
+    .pipe(sass({
+
+    }).on("error", sass.logError))
+    .pipe(cleanCSS({keepSpecialComments: 0}))
+    .pipe(rename("styles/style.min.css")) //
+    .pipe(gulp.dest("build/"))
+    .pipe(livereload());
 });
 
+gulp.task("build", function() {
+	// runSequence("clean", ["css", "replace", "copy"]);
+	runSequence("clean", ["sass", "replace", "copy"]);
+});
+
+gulp.task("watch", function () {
+	livereload.listen();
+  gulp.watch("src/styles/*.scss", ["sass"]);
+  gulp.watch("src/index.html", ["replace"]);
+});
+
+/*gulp.task("changeExt", function() {
+  gulp.src("src/styles/*.css")
+      .pipe(ext_replace(".scss"))
+      .pipe(gulp.dest("src/styles/"))
+});*/
