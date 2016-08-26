@@ -63,8 +63,8 @@ gulp.task("watch", function () {
   gulp.watch("src/index.html", ["html"]);
 });
 
-gulp.task("build", function() {
-	runSequence("clean", ["sass", "html", "js", "copy"]);
+gulp.task("build", function(callback) {
+	runSequence("clean", ["sass", "html", "js", "copy"], callback);
 });
 
 gulp.task("serve", ["build"], function() {
@@ -79,7 +79,7 @@ gulp.task("serve", ["build"], function() {
   gulp.watch("src/scripts/*.js", ["js"]);
 });
 
-gulp.task("publish", function() {
+gulp.task("_deploy", function() {
  
   // create a new publisher using S3 options 
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property 
@@ -123,4 +123,7 @@ gulp.task("publish", function() {
 // [gulp] [cache]  file3.js.gz 
 // ... 
 
+gulp.task("publish", function() {
+  runSequence("build", "_deploy");
+});
 
