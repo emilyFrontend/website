@@ -10,6 +10,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var livereload = require('gulp-livereload');
 var browserSync = require('browser-sync').create();
+var awspublish = require('gulp-awspublish');
 
 gulp.task("clean", function() {
 	return del([
@@ -77,3 +78,49 @@ gulp.task("serve", ["build"], function() {
   gulp.watch("src/index.html", ["html"]);
   gulp.watch("src/scripts/*.js", ["js"]);
 });
+
+gulp.task("publish", function() {
+ 
+  // create a new publisher using S3 options 
+  // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property 
+  var publisher = awspublish.create({
+    region: 'eu-central-1',
+    params: {
+      Bucket: 'emily-bucket'
+    },
+    accessKeyId: 'AKIAIE5R4UPHZF5LVHCQ',
+    secretAccessKey: 'COZCJSg36f3ArNbLCSTY7CWAIH/1kMIEhIQALVEC'
+  }, {
+    cacheFileName: 'your-cache-location'
+  });
+ 
+  // define custom headers 
+  var headers = {
+    // max-age in seconds
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+    // ... 
+  };
+ 
+  return gulp.src('./build/**/*')
+     // gzip, Set Content-Encoding headers and add .gz extension 
+    .pipe(awspublish.gzip())
+ 
+    // publisher will add Content-Length, Content-Type and headers specified above 
+    // If not specified it will set x-amz-acl to public-read by default 
+    .pipe(publisher.publish(headers))
+ 
+    // create a cache file to speed up consecutive uploads 
+    .pipe(publisher.cache())
+ 
+     // print upload updates to console 
+    .pipe(awspublish.reporter());
+});
+ 
+// output 
+// [gulp] [create] file1.js.gz 
+// [gulp] [create] file2.js.gz 
+// [gulp] [update] file3.js.gz 
+// [gulp] [cache]  file3.js.gz 
+// ... 
+
+
