@@ -1,7 +1,7 @@
 
 .modal {
 	position: fixed;
-	left: calc($half - 30%);
+	left: calc(50% - 30%);
 	top: $half;
   transform: translateY(- $half);
 	width: 60%;
@@ -36,7 +36,7 @@
 
 .modal button {
 	position: absolute;
-	top: $half - 25px;
+	top: calc(50% - 25px);
 	width: 50px;
 	height: 50px;
 	background-color: rgba(123, 123, 123, 0.6);

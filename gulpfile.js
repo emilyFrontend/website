@@ -115,13 +115,6 @@ gulp.task("_deploy", function() {
      // print upload updates to console 
     .pipe(awspublish.reporter());
 });
- 
-// output 
-// [gulp] [create] file1.js.gz 
-// [gulp] [create] file2.js.gz 
-// [gulp] [update] file3.js.gz 
-// [gulp] [cache]  file3.js.gz 
-// ... 
 
 gulp.task("publish", function() {
   runSequence("build", "_deploy");
