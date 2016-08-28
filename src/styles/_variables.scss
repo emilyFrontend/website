@@ -1,0 +1,72 @@
+/** 
+ *  Variables
+ */
+
+// Lengths
+$one-third: 33.3333333333%;
+$one-fourth: 25%;
+$half: 50%;
+$three-fourth: 75%;
+$full: 100%;
+
+// Common
+$max-width: 90%;
+
+// Base
+// ==========================================================================
+$base-font-size:        8px!default;
+$base-line-height:      1.5!default;
+$base-font-family:      "Conv_AtlasGrotesk-Medium", Helvetica, Arial;
+
+
+// Colors
+// ==========================================================================
+$color-body-background: #f5f5f5;
+$color-frame:           #fff;
+$color-text-primary:    #000;
+$color-text-secondary:  #B5B9C2;
+$color-ui-primary:      #fff;
+
+
+// Mediaqueries
+// ==========================================================================
+$mq-extra-small:        30em !default; // 480px
+$mq-small:              40em !default; // 640px
+$mq-medium:             59em !default; // 880px
+$mq-large:              75em !default; // 1200px
+$mq-extra-large:        93em !default; // 1488px
+$mq-vertical-large:     40em !default; // 640px
+
+
+// UI
+// ==========================================================================
+$block-border-width:    30px;
+$grid-gutter-width:     20px;
+$nav-toggle-height:     48px;
+$nav-sidebar-width:     380px;
+$max-content-width:     1200px;
+
+
+// Awards
+// ==========================================================================
+$svg-design-excellence-width: 170px;
+$svg-design-excellence-height: 84px;
+
+$svg-visuelt-width: 55px;
+$svg-visuelt-height: 84px;
+
+$svg-eda-silver-width: 140px;
+$svg-eda-silver-height: 52px;
+
+$svg-eda-bronze-width: 140px;
+$svg-eda-bronze-height: 52px;
+
+$award-default-scale: 0.6;
+$award-small-scale: 0.88;
+
+
+// Z-index
+// ==========================================================================
+$z-index-home:          25;
+$z-index-main:          50;
+$z-index-contact:       75;

@@ -3,15 +3,18 @@
 // @import "../../node_modules/font-awesome/scss/font-awesome.scss";
 @import "vendor/sanitize/sanitize.scss";
 
+// variables and mixins
+@import "variables";
+
 // base, general
-@import "_base";
-@import "_helpers";
+@import "base";
+@import "helpers";
 
 // components
-@import "_customs";
-@import "_header";
-@import "_introduction";
-@import "_about";
-@import "_gallery";
-@import "_footer";
-@import "_modal";
+@import "customs";
+@import "header";
+@import "introduction";
+@import "about";
+@import "gallery";
+@import "footer";
+@import "modal";

@@ -8,7 +8,7 @@ html, body {
 }
 
 img {
-	width: 100%; /* make image responsive */
+	width: $full; /* make image responsive */
 	height: auto;
 	display: block; /* remove bottom padding */
 }
