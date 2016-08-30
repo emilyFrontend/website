@@ -1,7 +1,7 @@
 
 .modal {
 	position: fixed;
-	left: calc(50% - 30%);
+	left: calc(#{$half} - 30%);
 	top: $half;
   transform: translateY(- $half);
 	width: 60%;

@@ -44,8 +44,8 @@ gulp.task("copy", function() {
 gulp.task("sass", function() {
   return gulp.src("src/styles/style.scss")
     .pipe(sass().on("error", sass.logError))
-    // .pipe(cleanCSS({keepSpecialComments: 0}))
-    // .pipe(rename("styles/style.min.css")) //
+    .pipe(cleanCSS({keepSpecialComments: 0})) //
+    .pipe(rename("style.min.css")) //
     .pipe(gulp.dest("build/styles/"))
     .pipe(browserSync.stream());
 });

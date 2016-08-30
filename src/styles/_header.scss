@@ -14,7 +14,7 @@
 
 .logo {
 	float: left;
-	padding-top: $padding-10px;
+	padding-top: $standard-padding;
 }
 
 .h1 {
@@ -28,7 +28,7 @@
 .logo-and-icon {
 	position: relative;
 	height: $logo-and-icon-height;
-	padding-top: $padding-10px;
+	padding-top: $standard-padding;
 	background-color: $header-background;
 	z-index: $z-index-header-logo-and-icon;
 }
@@ -37,8 +37,8 @@
 	transform: translateY(-145px);
 	transition: transform .5s;
 	background-color: $header-background;
-	padding-top: $padding-10px;
-	padding-bottom: $padding-10px;
+	padding-top: $standard-padding;
+	padding-bottom: $standard-padding;
 }
 
 .menu-item {
@@ -57,7 +57,7 @@
 }
 
 .open-icon, .close-icon {
-	padding: $padding-10px;
+	padding: $standard-padding;
 }
 
 .open-icon {
