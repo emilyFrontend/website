@@ -94,14 +94,6 @@
 		float: right;
 		transform: scale(1,1);
 		transition: none;
-		@include media-query(#{$media-max-width}) {
-			padding-left: 3%;
-		  padding-right: 2%;
-		  position: absolute;
-		  top: $logo-and-icon-height;
-		  left: 0;
-		  right: 0;
-		}
 	}
 
 	.menu-item {
@@ -111,14 +103,14 @@
 }
 
 @media (max-width: $media-max-width) {
-	/* .menu-lists {
+	.menu-lists {
 		padding-left: 3%;
 	  padding-right: 2%;
 	  position: absolute;
 	  top: $logo-and-icon-height;
 	  left: 0;
 	  right: 0;
-	} */
+	}
 
 	.menu {
 		max-width: $max-width;

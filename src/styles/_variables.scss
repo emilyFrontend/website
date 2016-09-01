@@ -16,6 +16,7 @@ $standard-padding: 10px;
 // Colors
 $header-bground: rgb(125, 134, 120);
 $init-bground: hsl(86, 5%, 95%);
+$darker-bground: darken($init-bground, 20%);
 
 $dark-text: rgba(134, 140, 127, 1);
 
