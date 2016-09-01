@@ -14,12 +14,19 @@ $max-width: 90%;
 $standard-padding: 10px;
 
 // Colors
-$header-background: rgb(125, 134, 120);
+$header-bground: rgb(125, 134, 120);
+$init-bground: hsl(86, 5%, 95%);
+
+$dark-text: rgba(134, 140, 127, 1);
 
 // Z-index
 $z-index-header-logo-and-icon:	50;
 $z-index-screen-overlay: 			 100;
 $z-index-modal:       				 200;
+
+// Media queries breakpoints
+$media-min-width: 700px;
+$media-max-width: 699px;
 
 // Header Section
 $logo-and-icon-height: 65px;

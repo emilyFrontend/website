@@ -11,7 +11,8 @@ figure {
 }
 
 .gallery {
-	background-color: rgba(255, 105, 180, 0.7);
+	background-color: $init-bground;
+	color: $dark-text;
 }
 
 .gallery_container {
@@ -22,7 +23,7 @@ figure {
 	object-fit: cover;
 }
 
-@media (max-width: 699px) {
+@media (max-width: $media-max-width) {
 	.gallery-col {
 		width: $half;
 	}

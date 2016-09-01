@@ -3,14 +3,14 @@
  */
 
  .about {
- 	background-color: rgba(147, 74, 195, 0.6);
+ 	background-color: darken($init-bground, 20%);
  }
 
 .aboutColumn {
 	padding-bottom: 3%;
 }
 
-@media (min-width: 700px) {
+@media (min-width: $media-min-width) {
 	.aboutColumn {
 		float: left;
 		width: $one-third;

@@ -3,7 +3,7 @@
  */
 
 .introduction {
-	background-color: rgba(139, 195, 74, 0.6);
+	background-color: $init-bground;
 }
 
 .introduction-container {
@@ -15,6 +15,7 @@
 }
 
 .introText {
+	color: $dark-text;
 	padding-right: 2%;
 }
 
@@ -22,7 +23,7 @@
 	cursor: pointer;
 }
 
-@media (min-width: 700px) {
+@media (min-width: $media-min-width) {
 	.introContent {
 		clear: both;
 	}

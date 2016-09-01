@@ -8,7 +8,7 @@
 	left: 0;
 	right: 0;
 	z-index: $z-index-header-logo-and-icon;
-	background-color: $header-background;
+	background-color: $header-bground;
 	opacity: 0.8; 
 }
 
@@ -29,14 +29,14 @@
 	position: relative;
 	height: $logo-and-icon-height;
 	padding-top: $standard-padding;
-	background-color: $header-background;
+	background-color: $header-bground;
 	z-index: $z-index-header-logo-and-icon;
 }
 
 .menu-lists {
 	transform: translateY(-145px);
 	transition: transform .5s;
-	background-color: $header-background;
+	background-color: $header-bground;
 	padding-top: $standard-padding;
 	padding-bottom: $standard-padding;
 }
@@ -80,7 +80,7 @@
 	transform: translateY(0);
 }
 
-@media (min-width: 700px) {
+@media (min-width: $media-min-width) {
 	.logo-and-icon {
 		height: auto;
 	}
@@ -94,6 +94,14 @@
 		float: right;
 		transform: scale(1,1);
 		transition: none;
+		@include media-query(#{$media-max-width}) {
+			padding-left: 3%;
+		  padding-right: 2%;
+		  position: absolute;
+		  top: $logo-and-icon-height;
+		  left: 0;
+		  right: 0;
+		}
 	}
 
 	.menu-item {
@@ -102,15 +110,15 @@
 	}
 }
 
-@media (max-width: 699px) {
-	.menu-lists {
+@media (max-width: $media-max-width) {
+	/* .menu-lists {
 		padding-left: 3%;
 	  padding-right: 2%;
 	  position: absolute;
 	  top: $logo-and-icon-height;
 	  left: 0;
 	  right: 0;
-	}
+	} */
 
 	.menu {
 		max-width: $max-width;
