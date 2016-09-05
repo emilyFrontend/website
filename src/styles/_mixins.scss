@@ -9,11 +9,26 @@
           border-radius: $radius;
 }
 
-@mixin media-query($point) {
-	@if $point == #{$media-min-width} {
-     @media (min-width: #{$media-min-width}) { @content ; }
+/* @mixin media-table {
+  @media(min-width: $tablet) {
+    @content;
   }
-  @else if $point == #{$media-max-width} {
-     @media (max-width: #{$media-max-width}) { @content ; }
+}
+
+@mixin media-laptop {
+  @media(min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin media-laptopL {
+  @media(min-width: $laptopL) {
+    @content;
+  }
+} */
+
+@mixin media-query {
+  @media (min-width: 700px) {
+    @content;
   }
 }
