@@ -87,12 +87,12 @@ gulp.task("_deploy", function() {
   // create a new publisher using S3 options 
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property 
   var publisher = awspublish.create({
-    region: 'eu-central-1',
+    region: '',
     params: {
-      Bucket: 'emily-bucket'
+      Bucket: ''
     },
-    accessKeyId: 'AKIAIK5XP3SSEWRXZZOQ',
-    secretAccessKey: 'nJP82GPp/3/lIn4lmDxBodx32XuZY8XcyQrtsKyq'
+    accessKeyId: '',
+    secretAccessKey: ''
   }, {
     cacheFileName: 'your-cache-location'
   });
