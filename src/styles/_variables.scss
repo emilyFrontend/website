@@ -1,0 +1,37 @@
+/** 
+ *  Variables
+ */
+
+// Lengths
+$one-third: 33.3333333333%;
+$one-fourth: 25%;
+$half: 50%;
+$three-fourth: 75%;
+$full: 100%;
+
+// Common
+$max-width: 90%;
+$standard-padding: 10px;
+
+// Colors
+$header-bground: rgb(125, 134, 120);
+$init-bground: hsl(86, 5%, 95%);
+$darker-bground: darken($init-bground, 20%);
+
+$dark-text: rgba(134, 140, 127, 1);
+
+// Z-index
+$z-index-header-logo-and-icon:	50;
+$z-index-screen-overlay: 			 100;
+$z-index-modal:       				 200;
+
+// Media queries breakpoints
+$media-min-width: 700px;
+$media-max-width: 699px;
+
+$tablet: 768px;
+$laptop: 1024px;
+$laptopL: 1440px;
+
+// Header Section
+$logo-and-icon-height: 65px;

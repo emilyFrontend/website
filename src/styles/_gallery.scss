@@ -7,30 +7,24 @@ figure {
 }
 
 .gallery-col {
-	width: 25%;
+	width: $one-fourth;
 }
 
 .gallery {
-	background-color: rgba(255, 105, 180, 0.7);
+	background-color: $init-bground;
+	color: $dark-text;
 }
 
 .gallery_container {
-	/*padding-bottom: 5%;*/
 }
-
-/*.figure {
-	display: inline-block;
-	max-width: 20%;
-	background-color: rgba(255, 240, 192, 0.7);
-}*/
 
 .gallery_container img {
 	height: 180px;
 	object-fit: cover;
 }
 
-@media (max-width: 699px) {
+@media (max-width: $media-max-width) {
 	.gallery-col {
-		width: 50%;
+		width: $half;
 	}
 }

@@ -3,17 +3,17 @@
  */
 
  .about {
- 	background-color: rgba(147, 74, 195, 0.6);
+ 	background-color: $darker-bground;
  }
 
 .aboutColumn {
 	padding-bottom: 3%;
 }
 
-@media (min-width: 700px) {
+@media (min-width: $media-min-width) {
 	.aboutColumn {
 		float: left;
-		width: 33.3333333333%;
+		width: $one-third;
 		padding-bottom: 0%;
 	}
 

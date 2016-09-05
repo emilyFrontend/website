@@ -7,47 +7,90 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
-	background-color: rgb(125,134, 120); 
-}
-
-.header-offset {
-	padding-top: 78px;
-}
-
-.logo {
-	float: left;
-	padding-top: 10px;
+	z-index: $z-index-header-logo-and-icon;
+	background-color: $header-bground;
+	opacity: 0.8; 
 }
 
 .h1 {
 	font-size: 1.5em;
 }
 
-.menu-icon {
-	float: right;
+.logo {
+	float: left;
+	padding-top: $standard-padding;
 }
 
 .logo-and-icon {
 	position: relative;
-	height: 65px;
-	padding-top: 10px;
-	background-color: rgb(125, 134, 120);
-	z-index: 100;
+	height: $logo-and-icon-height;
+	padding-top: $standard-padding;
+	background-color: $header-bground;
+	z-index: $z-index-header-logo-and-icon;
+	@include mq-desktop {
+		height: auto;
+	}
 }
 
-.menu-lists {
-	transform: translateY(-145px);
+.menu-icon {
+	float: right;
+	@include mq-desktop {
+		display: none;
+	}
+}
+
+/**
+* Menu section
+*/
+
+.menu-container {
+  position: absolute;
+  top: $logo-and-icon-height;
+  left: 0;
+  right: 0;
+  padding: $standard-padding 2% $standard-padding 3%;
+	
+	// original default
+  transform: translateY(-145px);
 	transition: transform .5s;
-	background-color: rgb(125, 134, 120);
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-color: $header-bground;
+
+	@include mq-desktop {
+		float: right;
+		display: inline-block;
+		position: relative;
+	  top: 0;
+		padding-left: 0;
+	  padding-right: 0;
+
+		transform: scale(1,1);
+		transition: none;
+	} 
+}
+
+.menu {
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+
+	@include mq-desktop {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+	}
 }
 
 .menu-item {
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 1em;
-  margin-top: 10px;
+	
+	@include mq-desktop {
+		display: inline-block;
+		margin-right: 1em;
+		margin-top: 10px;
+	}
 }
 
 /**
@@ -60,7 +103,7 @@
 }
 
 .open-icon, .close-icon {
-	padding: 10px;
+	padding: $standard-padding;
 }
 
 .open-icon {
@@ -81,44 +124,4 @@
 
 .is-visible {
 	transform: translateY(0);
-}
-
-@media (min-width: 700px) {
-	.logo-and-icon {
-		height: auto;
-	}
-
-	.menu-icon {
-		display: none;
-	}
-
-	.menu-lists {
-		display: inline-block;
-		float: right;
-		transform: scale(1,1);
-		transition: none;
-	}
-
-	.menu-item {
-		display: inline-block;
-		margin-right: 1em;
-	}
-}
-
-@media (max-width: 699px) {
-	.menu-lists {
-		padding-left: 3%;
-	  padding-right: 2%;
-	  position: absolute;
-	  top: 65px;
-	  left: 0;
-	  right: 0;
-	}
-
-	.menu {
-		max-width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 0;
-	}
 }

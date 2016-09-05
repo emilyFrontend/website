@@ -1,9 +1,9 @@
 
 .modal {
 	position: fixed;
-	left: calc(50% - 30%);
-	top: 50%;
-  transform: translateY(-50%);
+	left: calc(#{$half} - 30%);
+	top: $half;
+  transform: translateY(- $half);
 	width: 60%;
 	height: auto;
 	background-color: grey;
@@ -18,7 +18,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: $full;
 	height: 100vh;
 	z-index: 100;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -40,7 +40,7 @@
 	width: 50px;
 	height: 50px;
 	background-color: rgba(123, 123, 123, 0.6);
-	border-radius: 50%;
+	@include border-radius($half);
 	z-index: 20;
 	cursor: pointer;
 	outline: none;

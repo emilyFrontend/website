@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 build
 design.txt
+your-cache-location
+key.txt

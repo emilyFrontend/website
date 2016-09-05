@@ -1,0 +1,34 @@
+/** 
+ *  Mixins
+ */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* @mixin media-table {
+  @media(min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media(min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin media-laptopL {
+  @media(min-width: $laptopL) {
+    @content;
+  }
+} */
+
+@mixin mq-desktop {
+  @media (min-width: $media-min-width) {
+    @content;
+  }
+}
