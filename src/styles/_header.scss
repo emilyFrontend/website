@@ -12,17 +12,13 @@
 	opacity: 0.8; 
 }
 
-.logo {
-	float: left;
-	padding-top: $standard-padding;
-}
-
 .h1 {
 	font-size: 1.5em;
 }
 
-.menu-icon {
-	float: right;
+.logo {
+	float: left;
+	padding-top: $standard-padding;
 }
 
 .logo-and-icon {
@@ -31,60 +27,69 @@
 	padding-top: $standard-padding;
 	background-color: $header-bground;
 	z-index: $z-index-header-logo-and-icon;
+	@include mq-desktop {
+		height: auto;
+	}
 }
 
-// Menue section
+.menu-icon {
+	float: right;
+	@include mq-desktop {
+		display: none;
+	}
+}
 
+/**
+* Menu section
+*/
 
-
-.menu-container { 							// media-query change
-	transform: translateY(-145px);
+.menu-container {
+  position: absolute;
+  top: $logo-and-icon-height;
+  left: 0;
+  right: 0;
+  padding: $standard-padding 2% $standard-padding 3%;
+	
+	// original default
+  transform: translateY(-145px);
 	transition: transform .5s;
 	background-color: $header-bground;
-	padding-top: $standard-padding;
-	padding-bottom: $standard-padding;
+
+	@include mq-desktop {
+		float: right;
+		display: inline-block;
+		position: relative;
+	  top: 0;
+		padding-left: 0;
+	  padding-right: 0;
+
+		transform: scale(1,1);
+		transition: none;
+	} 
+}
+
+.menu {
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+
+	@include mq-desktop {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+	}
 }
 
 .menu-item {
 	font-weight: 600;
 	font-size: 1em;
-  margin-top: 10px;
-}
-
-@media (min-width: $media-min-width) {
-
-	.menu-icon {
-		display: none;
-	}
-
-	.menu-container {
-		display: inline-block;
-		float: right;
-		transform: scale(1,1);
-		transition: none;
-	}
-
-	.menu-item {
+	
+	@include mq-desktop {
 		display: inline-block;
 		margin-right: 1em;
-	}
-}
-
-@media (max-width: 699px) {
-	.menu-container {
-		padding-left: 3%;
-	  padding-right: 2%;
-	  position: absolute;
-	  top: $logo-and-icon-height;
-	  left: 0;
-	  right: 0;
-	}
-
-	.menu {
-		max-width: $max-width;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 0;
+		margin-top: 10px;
 	}
 }
 
@@ -119,10 +124,4 @@
 
 .is-visible {
 	transform: translateY(0);
-}
-
-@media (min-width: $media-min-width) {
-	.logo-and-icon {
-		height: auto;
-	}
 }

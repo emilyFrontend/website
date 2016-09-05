@@ -27,8 +27,8 @@
   }
 } */
 
-@mixin media-query {
-  @media (min-width: 700px) {
+@mixin mq-desktop {
+  @media (min-width: $media-min-width) {
     @content;
   }
 }
