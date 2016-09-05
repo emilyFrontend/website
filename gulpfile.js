@@ -11,6 +11,7 @@ var concat = require('gulp-concat');
 var livereload = require('gulp-livereload');
 var browserSync = require('browser-sync').create();
 var awspublish = require('gulp-awspublish');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task("clean", function() {
 	return del([
@@ -43,9 +44,11 @@ gulp.task("copy", function() {
 
 gulp.task("sass", function() {
   return gulp.src("src/styles/style.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(cleanCSS({keepSpecialComments: 0})) //
     .pipe(rename("style.min.css")) //
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/styles/"))
     .pipe(browserSync.stream());
 });
@@ -88,8 +91,8 @@ gulp.task("_deploy", function() {
     params: {
       Bucket: 'emily-bucket'
     },
-    accessKeyId: 'AKIAIE5R4UPHZF5LVHCQ',
-    secretAccessKey: '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'
+    accessKeyId: 'AKIAIK5XP3SSEWRXZZOQ',
+    secretAccessKey: 'nJP82GPp/3/lIn4lmDxBodx32XuZY8XcyQrtsKyq'
   }, {
     cacheFileName: 'your-cache-location'
   });

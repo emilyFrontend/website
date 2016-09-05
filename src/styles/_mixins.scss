@@ -8,12 +8,3 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-
-@mixin media-query($point) {
-	@if $point == #{$media-min-width} {
-     @media (min-width: #{$media-min-width}) { @content ; }
-  }
-  @else if $point == #{$media-max-width} {
-     @media (max-width: #{$media-max-width}) { @content ; }
-  }
-}

@@ -33,6 +33,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
     "node-sass": "^3.8.0",
     "run-sequence": "^1.2.2",
     "sanitize.css": "^4.1.0"
